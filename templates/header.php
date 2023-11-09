@@ -1,6 +1,13 @@
 <?php
 
 include_once("config/url.php");
+include_once("config/process.php");
+
+// limpa a mensagem
+if(isset($_SESSION['msg'])){
+    $printMsg = $_SESSION['msg'];
+    $_SESSION['msg'] = '';
+}
 
 ?>
 <!DOCTYPE html>
@@ -19,10 +26,10 @@ include_once("config/url.php");
     
 <header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <a class="navbar-brand" href="<?= $BASE_URL ?>index.php">
-        <img src="<?= $BASE_URL ?>img/logo.png" alt="Agenda">
+        <img src="<?= $BASE_URL ?>img/Vir.png" alt="Agenda">
         </a>
         <div>
             <div class="navbar-nav">
